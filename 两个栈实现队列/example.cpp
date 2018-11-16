@@ -25,8 +25,10 @@ void CQueue<T>::appendTail(const T &node)
 template <class T>
 T CQueue<T>::deleteHead()
 {
-	if(stack2.empty()){
-		while(!stack1.empty()){
+	if (stack2.empty())
+	{
+		while (!stack1.empty())
+		{
 			stack2.push(stack1.top());
 			stack1.pop();
 		}
@@ -41,6 +43,6 @@ int main()
 	CQueue<int> que;
 	que.appendTail(3);
 	que.appendTail(4);
-	std::cout<< que.deleteHead() <<std::endl;
+	std::cout << que.deleteHead() << std::endl;
 	return 0;
 }
